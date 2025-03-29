@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "content_types" : [ "KNOWLEDGE_BASE", "MEMBERSHIP", "LANDING_PAGE", "CASE_STUDY", "SITE_PAGE", "SUBSCRIPTION", "CUSTOMER_PORTAL", "BLOG_LISTING", "WEB_INTERACTIVE", "BLOG_POST" ],
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "module_id" : 188054938208,
+  "label" : "Slider Card",
+  "icon" : "fontawesome-5.14.0:Alternate%20List",
+  "is_available_for_new_content" : true
+}

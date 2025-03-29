@@ -1,0 +1,147 @@
+.text-image-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.text-image-left,
+.text-image-right {
+  max-width: 280px;
+  margin: auto;
+}
+
+.text-image-left h2 {
+  margin-top: 0;
+}
+
+.text-image-left h2 span {
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 1px;
+}
+
+.text-image-left p {
+  margin: 0;  
+}
+
+.text-image-left p span {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 1px;
+  padding-bottom: 30px;
+}
+
+
+.text-image-right {
+  padding-top: 30px;
+}
+
+.text-image-button {
+  padding: 8px 28px 10px;
+  text-decoration: none;
+  margin: 8px;
+}
+
+{# ---- Mobile Breakpoint ---- #}
+
+@media only screen and (max-width: 576px) {
+  .text-image-button-container{
+    display: flex;
+    flex-direction: column;   
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .text-image-button-container{
+    display: inline-flex;
+  }
+
+  .text-image-left,
+  .text-image-right {
+    max-width: 450px;
+  }
+  
+  .text-image-button {
+    margin: 0 8px;
+  }  
+}
+
+@media only screen and (min-width: 768px) {
+  .text-image-left,
+  .text-image-right {
+    max-width: 595px;
+  }
+}
+
+{# ---- Tablet Breakpoint ---- #}
+
+@media only screen and (min-width: 992px) {
+  .text-image-container {
+    flex-direction: row;
+    text-align: left;
+  }
+  .text-image-left,
+  .text-image-right {
+    max-width: 455px;
+  }
+
+  .text-image-left h2 span {
+    line-height: 60px;
+    letter-spacing: 1.2px;
+  }
+
+  .text-image-left p span {
+    line-height: 28px;
+    letter-spacing: 1.2px;
+    padding-bottom: 40px;
+  }
+  
+    .text-image-right {
+    display: flex;
+    height: 332px;
+  }
+  
+  .text-image-right img {
+    object-fit: cover;
+    object-position: left;
+  }
+}
+
+{# ---- Desktop Breakpoint ---- #}
+
+@media only screen and (min-width: 1200px) {
+  .text-image-container {
+    justify-content: center;
+  }
+
+  .text-image-left {
+    max-width: 555px;
+  }
+
+  .text-image-left,
+  .text-image-right {
+    margin: 0 63.5px 0;
+  }
+
+  .text-image-left h2 span {
+    line-height: 68px;
+    letter-spacing: 1.4px;
+  }
+
+  .text-image-left p span {
+    line-height: 30px;
+    letter-spacing: 1.2px;
+  }
+
+  .text-image-right {
+    display: flex;
+    width: 458px;
+    height: 380px;
+  }
+  
+  .text-image-right img {
+    object-fit: cover;
+    object-position: left;
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "label": "Primary Color",
+    "name": "primary",
+    "type": "color",
+    "help_text": "This will be the default color for the primary text color",
+    "default": {
+      "color": "#00B6DD"
+    }
+  },
+  {
+    "label": "Secondary Color",
+    "name": "secondary",
+    "type": "color",
+    "help_text": "This will be the default color for the Secondary text color",
+    "default": {
+      "color": "#081580"
+    }
+  },
+  {
+    "label": "Tertiary Color",
+    "name": "tertiary",
+    "type": "color",
+    "help_text": "This will be the default color for the Tertiary text color",
+    "default": {
+      "color": "#010101"
+    }
+  }
+]

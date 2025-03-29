@@ -1,0 +1,129 @@
+[ {
+  "id" : "c81d9c83-aeeb-d0de-19bd-58b0c6ce55ee",
+  "name" : "banner_title",
+  "label" : "Banner Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Solutions for people like you"
+}, {
+  "id" : "600ee800-c4b1-7e02-351d-c05d3e0b57fc",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e2f5e945-184e-8b57-1479-bc9f1646bc92",
+    "name" : "mobile",
+    "label" : "Mobile",
+    "required" : false,
+    "locked" : false,
+    "load_external_fonts" : true,
+    "type" : "font",
+    "display_width" : null,
+    "default" : {
+      "size" : 46,
+      "styles" : {
+        "text-decoration" : "none",
+        "font-weight" : "bold",
+        "font-style" : "normal"
+      },
+      "size_unit" : "px"
+    }
+  }, {
+    "id" : "03475476-c96b-573f-f8c8-45b48f906ba9",
+    "name" : "tablet",
+    "label" : "Tablet",
+    "required" : false,
+    "locked" : false,
+    "load_external_fonts" : true,
+    "type" : "font",
+    "display_width" : null,
+    "default" : {
+      "size" : 54,
+      "styles" : {
+        "text-decoration" : "none",
+        "font-weight" : "bold",
+        "font-style" : "normal"
+      },
+      "size_unit" : "px"
+    }
+  }, {
+    "id" : "41fd8248-03d2-15cb-10f4-26f7f606405f",
+    "name" : "desktop",
+    "label" : "Desktop",
+    "required" : false,
+    "locked" : false,
+    "load_external_fonts" : true,
+    "type" : "font",
+    "display_width" : null,
+    "default" : {
+      "size" : 62,
+      "styles" : {
+        "text-decoration" : "none",
+        "font-weight" : "bold",
+        "font-style" : "normal"
+      },
+      "size_unit" : "px"
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "mobile" : {
+      "size" : 46,
+      "styles" : {
+        "text-decoration" : "none",
+        "font-weight" : "bold",
+        "font-style" : "normal"
+      },
+      "size_unit" : "px"
+    },
+    "tablet" : {
+      "size" : 54,
+      "styles" : {
+        "text-decoration" : "none",
+        "font-weight" : "bold",
+        "font-style" : "normal"
+      },
+      "size_unit" : "px"
+    },
+    "desktop" : {
+      "size" : 62,
+      "styles" : {
+        "text-decoration" : "none",
+        "font-weight" : "bold",
+        "font-style" : "normal"
+      },
+      "size_unit" : "px"
+    }
+  }
+}, {
+  "id" : "53f30c49-32e5-b31a-b718-a059987868a9",
+  "name" : "image_field",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://45181462.fs1.hubspotusercontent-na1.net/hubfs/45181462/marian-kroell-OVXlWNcQV5M-unsplash.png",
+    "alt" : "marian-kroell-OVXlWNcQV5M-unsplash",
+    "loading" : "lazy",
+    "width" : 1920,
+    "height" : 396,
+    "max_width" : 1920,
+    "max_height" : 396
+  }
+} ]

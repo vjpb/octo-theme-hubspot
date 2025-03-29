@@ -1,0 +1,146 @@
+{# ----- Module Styles ----- #}
+{% require_css %}
+<style>
+  {% scope_css %} 
+  .card-container {
+    {{ module.style.spacing.mobile.css }}
+  }
+
+  .card-text h3 span {
+    font-family: {{ module.style.fonts.mobile.card_title.font|escape_attr }};
+    {{ module.style.fonts.mobile.card_title.style|escape_attr }};
+    color: {{ module.style.fonts.mobile.card_title.color|escape_attr }};
+    font-size: {{ module.style.fonts.mobile.card_title.size|escape_attr }}{{module.style.fonts.mobile.card_title.size_unit|escape_attr }};
+  }
+
+  .card-description span {
+    font-family: {{ module.style.fonts.mobile.card_description.font|escape_attr }};
+    {{ module.style.fonts.mobile.card_description.style|escape_attr }};
+    color: {{ module.style.fonts.mobile.card_description.color|escape_attr }};
+    font-size: {{ module.style.fonts.mobile.card_description.size|escape_attr }}{{module.style.fonts.mobile.card_description.size_unit|escape_attr }};
+  }
+
+  {# ---- End custom sorted layout styles  ---- #}
+
+
+  {# ---- Tablet Breakpoint ---- #}
+  @media only screen and (min-width: 768px) {
+    .card-container {
+      {{ module.style.spacing.tablet.css }}
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    {% if module.style.fonts.responsive_size %}
+      .card-text h3 span {
+        font-family: {{ module.style.fonts.responsives.tablet.card_title.font|escape_attr }};
+        {{ module.style.fonts.responsives.tablet.card_title.style|escape_attr }};
+        color: {{ module.style.fonts.responsives.tablet.card_title.color|escape_attr }};
+        font-size: {{ module.style.fonts.responsives.tablet.card_title.size|escape_attr }}{{module.style.fonts.responsives.tablet.card_title.size_unit|escape_attr }};
+      }
+
+      .card-description span {
+        font-family: {{ module.style.fonts.responsives.tablet.card_description.font|escape_attr }};
+        {{ module.style.fonts.responsives.tablet.card_description.style|escape_attr }};
+        color: {{ module.style.fonts.responsives.tablet.card_description.color|escape_attr }};
+        font-size: {{ module.style.fonts.responsives.tablet.card_description.size|escape_attr }}{{module.style.fonts.responsives.tablet.card_description.size_unit|escape_attr }};
+      }
+    {% endif %}
+  }
+
+  {# ---- Desktop Breakpoint ---- #}
+
+  @media only screen and (min-width: 1200px) {
+    .card-container {
+      {{ module.style.spacing.desktop.css }}
+    }
+    
+    {% if module.style.fonts.responsive_size %}
+      .card-text h3 span {
+        font-family: {{ module.style.fonts.responsives.desktop.card_title.font|escape_attr }};
+        {{ module.style.fonts.responsives.desktop.card_title.style|escape_attr }};
+        color: {{ module.style.fonts.responsives.desktop.card_title.color|escape_attr }};
+        font-size: {{ module.style.fonts.responsives.desktop.card_title.size|escape_attr }}{{module.style.fonts.responsives.desktop.card_title.size_unit|escape_attr }};"
+      }
+
+      .card-description span {
+        font-family: {{ module.style.fonts.responsives.desktop.card_description.font|escape_attr }};
+        {{ module.style.fonts.responsives.desktop.card_description.style|escape_attr }};
+        color: {{ module.style.fonts.responsives.desktop.card_description.color|escape_attr }}; 
+        font-size: {{ module.style.fonts.responsives.desktop.card_description.size|escape_attr }}{{module.style.fonts.responsives.desktop.card_description.size_unit|escape_attr }};
+      }
+    {% endif %}
+  }
+
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+    {# ----- END Module Styles ----- #}
+
+<section class="card-container">
+  {% for item in module.edit_card %}
+    <div class="card">
+      <div class="card-category card-category-{{loop.index}}">
+        {% inline_text field="category" value="{{ item.category }}" %}
+      </div>
+      <div class="card-img" style="background-image: url('{{ item.image_field.src|escape_url }}');"></div>     
+      <article class="card-text">
+        <h5 class="card-author card-author-{{loop.index}}">
+          {% inline_text field="name_author" value="{{ item.name_author }}" %}
+        </h5>
+        <h3>
+          <span>
+            {{ item.card_title }}
+          </span>
+        </h3>
+        <div class="card-description">
+          <span>
+            {{ item.description|truncatehtml(85,'...',true) }}
+          </span>
+        </div>
+        <div class="card-description-button">
+          {% set href = item.cta.link_field.url.href %}
+          {% if item.cta.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+          {% endif %}
+          <a class="card-cta card-cta-{{loop.index}}"
+            {% if item.cta.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+              href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+            {% else %}
+              href="{{ href|escape_url }}"
+            {% endif %}
+            {% if item.cta.link_field.open_in_new_tab %}
+              target="_blank"
+            {% endif %}
+            {% if item.cta.link_field.rel %}
+              rel="{{ item.cta.link_field.rel|escape_attr }}"
+            {% endif %}
+            >
+              {{ item.cta.text_field }}
+          </a>
+        </div>
+        {% require_css %}
+        <style>
+          {% scope_css %} 
+           .card-author-{{loop.index}} {
+              color: rgba({{ item.styles.name_author_styles.text_color.color|convert_rgb}}, {{ item.styles.name_author_styles.text_color.opacity * 0.01 }});
+           }
+           .card-category-{{loop.index}} {
+             background: rgba({{ item.styles.categories_styles.background_color.color|convert_rgb}}, {{ item.styles.categories_styles.background_color.opacity * 0.01 }});
+             color: rgba({{ item.styles.categories_styles.text_color.color|convert_rgb}}, {{ item.styles.categories_styles.text_color.opacity * 0.01 }});
+           }
+           .card-cta-{{loop.index}} {
+             background: rgba({{ item.cta.styles.color_field.color|convert_rgb}}, {{ item.cta.styles.color_field.opacity * 0.01 }});
+             color: rgba({{ item.cta.styles.text_color.color|convert_rgb}}, {{ item.cta.styles.text_color.opacity * 0.01 }});
+           }
+           .card-cta-{{loop.index}}:hover {
+             background: rgba({{ item.cta.styles.color_hover.color|convert_rgb}}, {{ item.cta.styles.color_hover.opacity * 0.01 }});
+           }
+          {% end_scope_css %}
+        </style>
+        {% end_require_css %}
+      </article>
+    </div>
+  {% endfor %}  
+</section>

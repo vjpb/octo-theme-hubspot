@@ -1,0 +1,145 @@
+{# ----- Module Styles ----- #}
+{% require_css %}
+<style>
+  {% scope_css %} 
+  .text-image-container{
+    background: rgba({{ module.style.backgroun_section_color.color|convert_rgb}}, {{ module.style.backgroun_section_color.opacity * 0.01 }});
+    {{ module.style.spacing.mobile.css }}
+  }
+
+  .text-image-left h2 span {
+    font-family: {{ module.style.custom_font.mobile.title.font|escape_attr }};
+    {{ module.style.custom_font.mobile.title.style|escape_attr }};
+    color: {{ module.style.custom_font.mobile.title.color|escape_attr }};
+    font-size: {{ module.style.custom_font.mobile.title.size|escape_attr }}{{module.style.custom_font.mobile.title.size_unit|escape_attr }};
+  }
+
+    .text-image-left p span {
+    font-family: {{ module.style.custom_font.mobile.description.font|escape_attr }};
+    {{ module.style.custom_font.mobile.description.style|escape_attr }};
+    color: {{ module.style.custom_font.mobile.description.color|escape_attr }};
+    font-size: {{ module.style.custom_font.mobile.description.size|escape_attr }}{{module.style.custom_font.mobile.description.size_unit|escape_attr }};
+  }
+
+  {# ---- End custom sorted layout styles  ---- #}
+
+  {% if module.style.custom_font.resposive_sizes %}
+
+  {# ---- Tablet Breakpoint ---- #}
+
+  @media only screen and (min-width: 992px) {
+    .text-image-container{
+      {{ module.style.spacing.tablet.css }}
+    }
+    
+    .text-image-left h2 span {
+      font-family: {{ module.style.custom_font.resposive.tablet.title.font|escape_attr }};
+      {{ module.style.custom_font.resposive.tablet.title.style|escape_attr }};
+      color: {{ module.style.custom_font.resposive.tablet.title.color|escape_attr }};
+      font-size: {{ module.style.custom_font.resposive.tablet.title.size|escape_attr }}{{module.style.custom_font.resposive.tablet.title.size_unit|escape_attr }};
+    }
+
+    .text-image-left p span {
+      font-family: {{ module.style.custom_font.resposive.tablet.description.font|escape_attr }};
+      {{ module.style.custom_font.resposive.tablet.description.style|escape_attr }};
+      color: {{ module.style.custom_font.resposive.tablet.description.color|escape_attr }};
+      font-size: {{ module.style.custom_font.resposive.tablet.description.size|escape_attr }}{{module.style.custom_font.resposive.tablet.description.size_unit|escape_attr }};
+    }
+  }
+
+  {# ---- Desktop Breakpoint ---- #}
+
+  @media only screen and (min-width: 1200px) {
+    .text-image-container{
+      {{ module.style.spacing.desktop.css }}
+    }
+
+    .text-image-left h2 span {
+      font-family: {{ module.style.custom_font.resposive.desktop.title.font|escape_attr }};
+      {{ module.style.custom_font.resposive.desktop.title.style|escape_attr }};
+      color: {{ module.style.custom_font.resposive.desktop.title.color|escape_attr }};
+      font-size: {{ module.style.custom_font.resposive.desktop.title.size|escape_attr }}{{module.style.custom_font.resposive.desktop.title.size_unit|escape_attr }};
+    }
+
+    .text-image-left p span {
+      font-family: {{ module.style.custom_font.resposive.desktop.description.font|escape_attr }};
+      {{ module.style.custom_font.resposive.desktop.description.style|escape_attr }};
+      color: {{ module.style.custom_font.resposive.desktop.description.color|escape_attr }};
+      font-size: {{ module.style.custom_font.resposive.desktop.description.size|escape_attr }}{{module.style.custom_font.resposive.desktop.description.size_unit|escape_attr }};
+    }
+  }
+  {% endif %}
+
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{# ----- END Module Styles ----- #}
+
+<section class="text-image-container">
+  <article class="text-image-left">
+    <h2>
+      <span>{{ module.text_side.title }}</span>
+    </h2>
+    <p>
+      <span>{{ module.text_side.description }}</span>
+    </p>
+    <div class="text-image-button-container">
+      {% if module.text_side.add_button %}
+        {% for item in module.text_side.button %}
+          {% set href = item.link_field.url.href %}
+          {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+          {% endif %}
+          <a class="text-image-button text-image-button-{{loop.index}}" 
+            {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+              href="{{ href }}" 
+            {% else %}
+              href="{{ href|escape_url }}"
+            {% endif %}
+            {% if item.link_field.open_in_new_tab %}
+              target="_blank"
+            {% endif %}
+            {% if item.link_field.rel %}
+              rel="{{ item.link_field.rel|escape_attr }}"
+            {% endif %}
+            >
+            {{ item.label_name }}
+          </a>
+          {% require_css %}
+          <style>
+            {% scope_css %}
+              .text-image-button-{{loop.index}}{
+                background: rgba({{ item.button_styles.color_field.color|convert_rgb}}, {{ item.button_styles.color_field.opacity * 0.01 }});
+                color: rgba({{ item.button_styles.text_color.color|convert_rgb}}, {{ item.button_styles.text_color.opacity * 0.01 }});
+                border: {{ item.button_styles.border_size ~ 'px' }} solid rgba({{ item.button_styles.border_color.color|convert_rgb}}, {{ item.button_styles.border_color.opacity * 0.01 }});
+              }
+              .text-image-button-{{loop.index}}:hover{
+                background: rgba({{ item.button_styles.hover.hover_color.color|convert_rgb}}, {{ item.button_styles.hover.hover_color.opacity * 0.01 }});
+                border: {{ item.button_styles.border_size ~ 'px' }} solid rgba({{ item.button_styles.hover.border_color.color|convert_rgb}}, {{ item.button_styles.hover.border_color.opacity * 0.01 }});
+              }
+            {%  end_scope_css %}
+          </style>
+          {% end_require_css %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </article>
+  <div class="text-image-right">
+    {% if module.image_side.image_field.src %}
+      {% set sizeAttrs = 'width="{{ module.image_side.image_field.width|escape_attr }}" height="{{ module.image_side.image_field.height|escape_attr }}"' %}
+      {% if module.image_side.image_field.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ module.image_side.image_field.width|escape_attr }}" height="{{ module.image_side.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+      {% elif module.image_side.image_field.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ module.image_side.image_field.max_width|escape_attr }}" height="{{ module.image_side.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+       {% set loadingAttr = module.image_side.image_field.loading != 'disabled' ? 'loading="{{ module.image_side.image_field.loading|escape_attr }}"' : '' %}
+      <img src="{{ module.image_side.image_field.src|escape_url }}" alt="{{ module.image_side.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+    {% endif %}
+  </div>
+</section>
+
+
+
+
+

@@ -1,0 +1,47 @@
+{# ----- Module Styles ----- #}
+{% require_css %}
+<style>
+  {% scope_css %} 
+  .banner-text {
+    font-family: {{ module.style.mobile.font|escape_attr }};
+    {{ module.style.mobile.style|escape_attr }};
+    color: {{ module.style.mobile.color|escape_attr }};
+    font-size: {{ module.style.mobile.size|escape_attr }}{{module.style.mobile.size_unit|escape_attr }};
+  }
+
+  {# ---- End custom sorted layout styles  ---- #}
+
+  {# ---- Tablet Breakpoint ---- #}
+
+  @media only screen and (min-width: 992px) {
+    .banner-text {
+      font-family: {{ module.style.tablet.font|escape_attr }};
+      {{ module.style.tablet.style|escape_attr }};
+      color: {{ module.style.tablet.color|escape_attr }};
+      font-size: {{ module.style.tablet.size|escape_attr }}{{module.style.tablet.size_unit|escape_attr }};
+    }
+  }
+
+  {# ---- Desktop Breakpoint ---- #}
+
+  @media only screen and (min-width: 1200px) {
+    .banner-text {
+      font-family: {{ module.style.desktop.font|escape_attr }};
+      {{ module.style.desktop.style|escape_attr }};
+      color: {{ module.style.desktop.color|escape_attr }};
+      font-size: {{ module.style.desktop.size|escape_attr }}{{module.style.desktop.size_unit|escape_attr }};
+    }
+  }
+
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+    {# ----- END Module Styles ----- #}
+
+
+<section class="baner-container" style="background-image: url('{{ module.image_field.src|escape_url }}');">
+  <h1 class="banner-text">
+    <span>{{ module.banner_title }}</span>
+  </h1>
+</section>

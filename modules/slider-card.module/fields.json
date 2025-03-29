@@ -1,0 +1,1162 @@
+[ {
+  "id" : "ad2d4d1b-cf80-6231-eaab-9c5ac8fb7e08",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "dcf57805-b20b-62f4-0766-33664542c882",
+    "name" : "fonts",
+    "label" : "Fonts",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "5d8e558f-259d-2f24-e242-14abc05fb835",
+      "name" : "mobile",
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "5b2fdd6f-35e8-34b8-c343-2447f383c827",
+        "name" : "card_title",
+        "label" : "Card Title",
+        "required" : false,
+        "locked" : false,
+        "load_external_fonts" : true,
+        "type" : "font",
+        "display_width" : null,
+        "default" : {
+          "size" : 18,
+          "color" : "#010101",
+          "size_unit" : "px"
+        }
+      }, {
+        "id" : "880cd3be-1ce8-40cc-d037-d2df5411cf98",
+        "name" : "card_description",
+        "label" : "Card Description",
+        "required" : false,
+        "locked" : false,
+        "load_external_fonts" : true,
+        "type" : "font",
+        "display_width" : null,
+        "default" : {
+          "size" : 14,
+          "color" : "#010101",
+          "size_unit" : "px"
+        }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "card_title" : {
+          "size" : 18,
+          "color" : "#010101",
+          "size_unit" : "px"
+        },
+        "card_description" : {
+          "size" : 14,
+          "color" : "#010101",
+          "size_unit" : "px"
+        }
+      }
+    }, {
+      "id" : "6c0646b8-a80c-0f4b-88c2-0fb5e71064e2",
+      "name" : "responsive_size",
+      "label" : "Resposive Sizes",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "display_width" : null,
+      "default" : false
+    }, {
+      "id" : "b8a6ba18-91a9-550e-84ab-7ab404f4c7fe",
+      "name" : "responsives",
+      "label" : "Responsives",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "style.fonts.responsive_size",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "ce9c8a1e-a149-463e-109d-2c44342bd817",
+        "name" : "tablet",
+        "label" : "Tablet",
+        "required" : false,
+        "locked" : false,
+        "children" : [ {
+          "id" : "f49a2a9f-0342-8196-e5cb-5ce9eaa227ca",
+          "name" : "card_title",
+          "label" : "Card Title",
+          "required" : false,
+          "locked" : false,
+          "load_external_fonts" : true,
+          "type" : "font",
+          "display_width" : null,
+          "default" : {
+            "size" : 20,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        }, {
+          "id" : "e08914e8-ff60-34d9-fa0e-cbaa146bbc55",
+          "name" : "card_description",
+          "label" : "Card Description",
+          "required" : false,
+          "locked" : false,
+          "load_external_fonts" : true,
+          "type" : "font",
+          "display_width" : null,
+          "default" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        } ],
+        "tab" : "STYLE",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "display_width" : null,
+        "default" : {
+          "card_title" : {
+            "size" : 20,
+            "color" : "#010101",
+            "size_unit" : "px"
+          },
+          "card_description" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        }
+      }, {
+        "id" : "b190c11c-f6f0-edf6-0a10-d8c7f2edf02b",
+        "name" : "desktop",
+        "label" : "Desktop",
+        "required" : false,
+        "locked" : false,
+        "children" : [ {
+          "id" : "1d7926f5-bdc7-6594-30b7-084e5772f423",
+          "name" : "card_title",
+          "label" : "Card Title",
+          "required" : false,
+          "locked" : false,
+          "load_external_fonts" : true,
+          "type" : "font",
+          "display_width" : null,
+          "default" : {
+            "size" : 22,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        }, {
+          "id" : "3c7aeb82-d07b-6add-778b-d60ca2327400",
+          "name" : "card_description",
+          "label" : "Card Description",
+          "required" : false,
+          "locked" : false,
+          "load_external_fonts" : true,
+          "type" : "font",
+          "display_width" : null,
+          "default" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        } ],
+        "tab" : "STYLE",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "display_width" : null,
+        "default" : {
+          "card_title" : {
+            "size" : 22,
+            "color" : "#010101",
+            "size_unit" : "px"
+          },
+          "card_description" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "tablet" : {
+          "card_title" : {
+            "size" : 20,
+            "color" : "#010101",
+            "size_unit" : "px"
+          },
+          "card_description" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        },
+        "desktop" : {
+          "card_title" : {
+            "size" : 22,
+            "color" : "#010101",
+            "size_unit" : "px"
+          },
+          "card_description" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        }
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "mobile" : {
+        "card_title" : {
+          "size" : 18,
+          "color" : "#010101",
+          "size_unit" : "px"
+        },
+        "card_description" : {
+          "size" : 14,
+          "color" : "#010101",
+          "size_unit" : "px"
+        }
+      },
+      "responsive_size" : false,
+      "responsives" : {
+        "tablet" : {
+          "card_title" : {
+            "size" : 20,
+            "color" : "#010101",
+            "size_unit" : "px"
+          },
+          "card_description" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        },
+        "desktop" : {
+          "card_title" : {
+            "size" : 22,
+            "color" : "#010101",
+            "size_unit" : "px"
+          },
+          "card_description" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        }
+      }
+    }
+  }, {
+    "id" : "0a404e38-f52d-e983-9d65-fab2f429ce62",
+    "name" : "spacing",
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "3ea7092f-9f9f-5ab0-16c1-6d9e54df4179",
+      "name" : "mobile",
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "display_width" : null,
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    }, {
+      "id" : "1091b09e-6f78-3f20-800d-f919c2ce1451",
+      "name" : "tablet",
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "display_width" : null,
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    }, {
+      "id" : "933a5120-4de2-c3d2-3eed-45f0778bfe19",
+      "name" : "desktop",
+      "label" : "Desktop",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "display_width" : null,
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    }
+  }, {
+    "id" : "23e1d545-f6ac-b0b3-91c2-b5243b7de2e9",
+    "name" : "slider_options",
+    "label" : "Slider Options",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "0b8ed87e-3758-db49-eb88-8f5c1f39b872",
+      "name" : "autoplay_disable",
+      "label" : "Add Autoplay",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "display_width" : null,
+      "default" : true
+    }, {
+      "id" : "e3b2bf95-f75f-58ac-3ef8-d6779d7d632b",
+      "name" : "autoplay",
+      "label" : "Autoplay",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "style.slider_options.autoplay_disable",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "text",
+      "min" : 100,
+      "max" : 10000,
+      "step" : 100,
+      "type" : "number",
+      "display_width" : null,
+      "default" : 3000
+    }, {
+      "id" : "5067aad1-3a04-f4d7-3794-1c878aa4caab",
+      "name" : "add_navigation",
+      "label" : "Add Navigation",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "display_width" : null,
+      "default" : true
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "autoplay_disable" : true,
+      "autoplay" : 3000,
+      "add_navigation" : true
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "fonts" : {
+      "mobile" : {
+        "card_title" : {
+          "size" : 18,
+          "color" : "#010101",
+          "size_unit" : "px"
+        },
+        "card_description" : {
+          "size" : 14,
+          "color" : "#010101",
+          "size_unit" : "px"
+        }
+      },
+      "responsive_size" : false,
+      "responsives" : {
+        "tablet" : {
+          "card_title" : {
+            "size" : 20,
+            "color" : "#010101",
+            "size_unit" : "px"
+          },
+          "card_description" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        },
+        "desktop" : {
+          "card_title" : {
+            "size" : 22,
+            "color" : "#010101",
+            "size_unit" : "px"
+          },
+          "card_description" : {
+            "size" : 16,
+            "color" : "#010101",
+            "size_unit" : "px"
+          }
+        }
+      }
+    },
+    "spacing" : {
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    },
+    "slider_options" : {
+      "autoplay_disable" : true,
+      "autoplay" : 3000,
+      "add_navigation" : true
+    }
+  }
+}, {
+  "id" : "2fe97956-4dce-69c7-d9d4-e6400ab3a497",
+  "name" : "edit_card",
+  "label" : "Add & Edit Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 6,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "baca1e2d-877e-cffc-f001-ab9733a03e7d",
+    "name" : "category",
+    "label" : "Category",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Category | Marketing"
+  }, {
+    "id" : "79752862-81da-e688-7b5e-61db0672518f",
+    "name" : "image_field",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://45181462.fs1.hubspotusercontent-na1.net/hubfs/45181462/Rectangle%20(1).png",
+      "alt" : "Rectangle (1)",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 170,
+      "max_width" : 395,
+      "max_height" : 170
+    }
+  }, {
+    "id" : "7d3c6c83-4321-fb4e-e0e0-29e4c66efa5d",
+    "name" : "name_author",
+    "label" : "Name (Author)",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Adam Sendler"
+  }, {
+    "id" : "f39f78f2-f538-2099-fb3d-9c77bf67b2e0",
+    "name" : "card_title",
+    "label" : "Card Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Solutions for people like you like people solutions for people like you like people"
+  }, {
+    "id" : "ae31a19d-c684-ac62-fd4c-caea11693ee4",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p><span>How can we help your technology and services business develop a revenue engine based…</span></p>"
+  }, {
+    "id" : "bed4fdae-5f40-fede-2b74-a271ab7a7b8c",
+    "name" : "cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "cf6a507f-904a-357e-6d7b-3b390a55d5bb",
+      "name" : "text_field",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Call to action"
+    }, {
+      "id" : "f368e555-55f5-5973-e34b-2e8d3e90ef95",
+      "name" : "link_field",
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "display_width" : null,
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.google.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "43fa5063-efb0-68a0-9033-dd27ad605370",
+      "name" : "styles",
+      "label" : "CTA Styles",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "68ed73be-47be-6efc-0016-8b131855484f",
+        "name" : "text_color",
+        "label" : "Text Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "display_width" : null,
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "4946dd7a-7fea-10c7-02f1-a4275499d934",
+        "name" : "color_field",
+        "label" : "Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "display_width" : null,
+        "default" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "f9e508ec-7d0e-f2f0-3278-4e9c798e3b2a",
+        "name" : "color_hover",
+        "label" : "Hover Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "display_width" : null,
+        "default" : {
+          "color" : "#6FA8DC",
+          "opacity" : 100
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "color_field" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "color_hover" : {
+          "color" : "#6FA8DC",
+          "opacity" : 100
+        }
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "text_field" : "Call to action",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.google.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "styles" : {
+        "text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "color_field" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "color_hover" : {
+          "color" : "#6FA8DC",
+          "opacity" : 100
+        }
+      }
+    }
+  }, {
+    "id" : "c3b669d3-c115-d555-e841-476d28efbe25",
+    "name" : "styles",
+    "label" : "Styles",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "7c3f73b1-6e5a-a9a8-0074-da3f58198a71",
+      "name" : "categories_styles",
+      "label" : "Categories Styles",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "55dce7fb-e8d3-760d-0315-213f63a0af84",
+        "name" : "background_color",
+        "label" : "Background Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "display_width" : null,
+        "default" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "748f9bf5-99e5-a4fd-3103-8ed805f38c01",
+        "name" : "text_color",
+        "label" : "Text Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "display_width" : null,
+        "default" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "background_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        }
+      }
+    }, {
+      "id" : "407068b4-7e28-ca9a-da9b-83ad9622dbd4",
+      "name" : "name_author_styles",
+      "label" : "Name (Author) Styles",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "70e7fe9a-db1b-72f7-a570-ce40cb5ef3e3",
+        "name" : "text_color",
+        "label" : "Text Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "display_width" : null,
+        "default" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "text_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "categories_styles" : {
+        "background_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        }
+      },
+      "name_author_styles" : {
+        "text_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "category" : "Category | Marketing",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://45181462.fs1.hubspotusercontent-na1.net/hubfs/45181462/Rectangle%20(1).png",
+      "alt" : "Rectangle (1)",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 170,
+      "max_width" : 395,
+      "max_height" : 170
+    },
+    "name_author" : "Adam Sendler",
+    "card_title" : "Solutions for people like you like people solutions for people like you like people",
+    "description" : "<p><span>How can we help your technology and services business develop a revenue engine based…</span></p>",
+    "cta" : {
+      "text_field" : "Call to action",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.google.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "styles" : {
+        "color_field" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "color_hover" : {
+          "color" : "#6FA8DC",
+          "opacity" : 100
+        }
+      }
+    },
+    "styles" : {
+      "categories_styles" : {
+        "background_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        }
+      },
+      "name_author_styles" : {
+        "text_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      }
+    }
+  }, {
+    "category" : "Category | Marketing",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://45181462.fs1.hubspotusercontent-na1.net/hubfs/45181462/Rectangle%20(1).png",
+      "alt" : "Rectangle (1)",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 170,
+      "max_width" : 395,
+      "max_height" : 170
+    },
+    "name_author" : "Adam Sendler",
+    "card_title" : "Solutions for people like you like people solutions for people like you like people",
+    "description" : "<p><span>How can we help your technology and services business develop a revenue engine based…</span></p>",
+    "cta" : {
+      "text_field" : "Call to action",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.google.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "styles" : {
+        "color_field" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "color_hover" : {
+          "color" : "#6FA8DC",
+          "opacity" : 100
+        }
+      }
+    },
+    "styles" : {
+      "categories_styles" : {
+        "background_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        }
+      },
+      "name_author_styles" : {
+        "text_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      }
+    }
+  }, {
+    "category" : "Category | Marketing",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://45181462.fs1.hubspotusercontent-na1.net/hubfs/45181462/Rectangle%20(1).png",
+      "alt" : "Rectangle (1)",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 170,
+      "max_width" : 395,
+      "max_height" : 170
+    },
+    "name_author" : "Adam Sendler",
+    "card_title" : "Solutions for people like you like people solutions for people like you like people",
+    "description" : "<p><span>How can we help your technology and services business develop a revenue engine based…</span></p>",
+    "cta" : {
+      "text_field" : "Call to action",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.google.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "styles" : {
+        "color_field" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "color_hover" : {
+          "color" : "#6FA8DC",
+          "opacity" : 100
+        }
+      }
+    },
+    "styles" : {
+      "categories_styles" : {
+        "background_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        }
+      },
+      "name_author_styles" : {
+        "text_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      }
+    }
+  }, {
+    "category" : "Category | Marketing",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://45181462.fs1.hubspotusercontent-na1.net/hubfs/45181462/Rectangle%20(1).png",
+      "alt" : "Rectangle (1)",
+      "loading" : "lazy",
+      "width" : 395,
+      "height" : 170,
+      "max_width" : 395,
+      "max_height" : 170
+    },
+    "name_author" : "Adam Sendler",
+    "card_title" : "Solutions for people like you like people solutions for people like you like people",
+    "description" : "<p><span>How can we help your technology and services business develop a revenue engine based…</span></p>",
+    "cta" : {
+      "text_field" : "Call to action",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.google.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "styles" : {
+        "color_field" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "color_hover" : {
+          "color" : "#6FA8DC",
+          "opacity" : 100
+        }
+      }
+    },
+    "styles" : {
+      "categories_styles" : {
+        "background_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        },
+        "text_color" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        }
+      },
+      "name_author_styles" : {
+        "text_color" : {
+          "color" : "#00B6DD",
+          "opacity" : 100
+        }
+      }
+    }
+  } ]
+} ]
